@@ -69,12 +69,12 @@ public class DualImageTrackingRevise : MonoBehaviour {
 
                     }
                     // When you touch the Flame prefabricated structure, a sound is output and then switches to "stage1".
-                    if (touchedObject.CompareTag("Flame"))
+                    if (touchedObject.CompareTag("Plant"))
                     {
                         if (clickSound != null)
                         {
                             audioSource.PlayOneShot(clickSound);
-                            SceneManager.LoadScene("stage1");
+                            SceneManager.LoadScene("HolePlantGame");
                         }
 
                     }
