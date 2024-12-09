@@ -91,7 +91,7 @@ public class GameManagerCat : MonoBehaviour
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
-            timerText.text = $"Time: {Mathf.CeilToInt(remainingTime)}";
+            timerText.text = $"{Mathf.CeilToInt(remainingTime)}";
 
             if (remainingTime <= 0)
             {
@@ -113,6 +113,7 @@ public class GameManagerCat : MonoBehaviour
     private void Clear()
     {
         Debug.Log("Clear!");
+        SceneManager.LoadScene("DualImageTracking");
         Time.timeScale = 0f;
     }
 
