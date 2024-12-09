@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HolePlantGame.unity
     guid: eae3c312a33c30a4783259a66d0c69dd
+  - enabled: 1
+    path: Assets/Scenes/Story1.unity
+    guid: 2027726b76126ed44bbbb369637f5205
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 51d935efda7ab7242ab918f8bd003c68, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 74ef3317be125d44088952b9a1e2c146, type: 2}
