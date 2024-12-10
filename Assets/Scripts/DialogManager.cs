@@ -113,6 +113,7 @@ public class DialogManager : MonoBehaviour
         // 대화 종료 처리
         Debug.Log("대화 종료");
         nextButton.gameObject.SetActive(false);
+
         if (SceneManager.GetActiveScene().name == "Story1")
         {
             SceneManager.LoadScene("DualImageTracking");

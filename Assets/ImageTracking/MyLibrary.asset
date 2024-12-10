@@ -21,9 +21,9 @@ MonoBehaviour:
       m_GuidLow: 5687900476686421146
       m_GuidHigh: 14180815352309544607
     m_SerializedTextureGuid:
-      m_GuidLow: 2784602731928400747
-      m_GuidHigh: 1431137325230846697
-    m_Size: {x: 0.18545455, y: 0.1}
+      m_GuidLow: 11904290031740668742
+      m_GuidHigh: 8458904965054074281
+    m_Size: {x: 0.13333334, y: 0.1}
     m_SpecifySize: 1
     m_Name: cat
     m_Texture: {fileID: 0}
@@ -31,9 +31,29 @@ MonoBehaviour:
       m_GuidLow: 4971210526943594719
       m_GuidHigh: 5465019846582606769
     m_SerializedTextureGuid:
-      m_GuidLow: 8364316785261818088
-      m_GuidHigh: 15582423168439133883
-    m_Size: {x: 0.120270275, y: 0.1}
+      m_GuidLow: 15966615625710608535
+      m_GuidHigh: 16674875868939341448
+    m_Size: {x: 0.1, y: 0.13333334}
     m_SpecifySize: 1
     m_Name: plant
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4672429426248819321
+      m_GuidHigh: 17711761815671427484
+    m_SerializedTextureGuid:
+      m_GuidLow: 5419112265623094434
+      m_GuidHigh: 12714463965915886619
+    m_Size: {x: 0.13333334, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: cycle
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5532269965210285563
+      m_GuidHigh: 872055851264316317
+    m_SerializedTextureGuid:
+      m_GuidLow: 17754400194394492022
+      m_GuidHigh: 10278216853814705977
+    m_Size: {x: 0.1, y: 0.13333334}
+    m_SpecifySize: 1
+    m_Name: light
     m_Texture: {fileID: 0}
