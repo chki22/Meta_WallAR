@@ -38,12 +38,6 @@ public class DialogManager : MonoBehaviour
         {
             DisplayDialog();
         }
-
-        // 특정 이미지 초기 상태를 비활성화
-        if (yeonhoImage != null)
-        {
-            yeonhoImage.gameObject.SetActive(false);
-        }
     }
 
     void DisplayNextDialog()
@@ -87,7 +81,7 @@ public class DialogManager : MonoBehaviour
         typingCoroutine = StartCoroutine(TypeText(currentDialog.text));
 
         // 특정 dialogIndex에서 이미지 활성화
-        if (SceneManager.GetActiveScene().name == "Story1" && currentDialogIndex >= 6 && yeonhoImage != null)
+        if (SceneManager.GetActiveScene().name == "InitStory" && currentDialogIndex >= 6 && yeonhoImage != null)
         {
             yeonhoImage.gameObject.SetActive(true);
             Debug.Log("이미지가 활성화되었습니다.");
@@ -114,9 +108,55 @@ public class DialogManager : MonoBehaviour
         Debug.Log("대화 종료");
         nextButton.gameObject.SetActive(false);
 
-        if (SceneManager.GetActiveScene().name == "Story1")
+        if (SceneManager.GetActiveScene().name == "InitStory")
         {
             SceneManager.LoadScene("DualImageTracking");
         }
+
+        else if (SceneManager.GetActiveScene().name == "PreCycleStory")
+        {
+            SceneManager.LoadScene("BicycleGame");
+        }
+
+        else if (SceneManager.GetActiveScene().name == "AfterCycleStory")
+        {
+            SceneManager.LoadScene("DualImageTracking");
+        }
+
+        else if (SceneManager.GetActiveScene().name == "PreCatStory")
+        {
+            SceneManager.LoadScene("CatDropGame");
+        }
+
+        else if (SceneManager.GetActiveScene().name == "AfterCatStory")
+        {
+            SceneManager.LoadScene("DualImageTracking");
+        }
+
+        else if (SceneManager.GetActiveScene().name == "PrePlantStory")
+        {
+            SceneManager.LoadScene("HolePlantGame");
+        }
+
+        else if (SceneManager.GetActiveScene().name == "AfterPlantStory")
+        {
+            SceneManager.LoadScene("DualImageTracking");
+        }
+
+        else if (SceneManager.GetActiveScene().name == "PreGiraffeStory")
+        {
+            SceneManager.LoadScene("GiraffeGame");
+        }
+
+        else if (SceneManager.GetActiveScene().name == "AfterGiraffeStory")
+        {
+            SceneManager.LoadScene("FinalStory");
+        }
+
+        else if (SceneManager.GetActiveScene().name == "FinalStory")
+        {
+            SceneManager.LoadScene("DualImageTracking");
+        }
+
     }
 }

@@ -50,7 +50,7 @@ public class GameManagerCat : MonoBehaviour
         retryButton.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
         retryButton.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
         retryButton.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
-        retryButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -50); // 타이머 아래에 배치
+        retryButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -120); // 타이머 아래에 배치
 
         retryButton.onClick.AddListener(RestartGame); // 버튼 클릭 이벤트 추가
 

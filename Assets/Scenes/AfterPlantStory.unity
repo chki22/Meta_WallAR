@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402185, g: 0.49316472, b: 0.57223153, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,6 +216,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &565451724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565451725}
+  - component: {fileID: 565451727}
+  - component: {fileID: 565451726}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &565451725
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565451724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1731300287}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1266.9}
+  m_SizeDelta: {x: 0, y: -2533.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565451726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565451724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8235295, g: 0.8196079, b: 0.8117648, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &565451727
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565451724}
+  m_CullTransparentMesh: 1
 --- !u!1 &613906679
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 554.35}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968092644
@@ -634,7 +708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fe23472c46b1fa5468e420ebc124f81e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f12d7ad1946af40418d1021fd1e8b9a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1023,6 +1097,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 565451725}
   - {fileID: 968092643}
   - {fileID: 1979576838}
   - {fileID: 1438095551}
@@ -1049,88 +1124,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogList:
   - name: "\uB098"
-    text: "\uD589\uAD81\uB3D9 \uBCBD\uD654\uB9C8\uC744'\uC774\uB77C\u2026 \uC5B4\uB5A4
-      \uBCBD\uD654\uB4E4\uC774 \uC788\uC744\uAE4C?\r\n\uC5B4? \uADFC\uB370 \uC65C
-      \uC800\uAE30\uB9CC \uC800\uB807\uAC8C \uD68C\uC0C9\uBE5B\uC774\uC9C0?\r\n(\uC8FC\uC704\uB97C
-      \uBCF4\uBA70) \uB531 \uBCBD\uD654\uB9C8\uC744\uB9CC \uC0C9\uC774 \uC0AC\uB77C\uC9C4\uAC70
-      \uAC19\uC796\uC544?\r"
-  - name: 
-    text: "\uB9C8\uC744 \uC548\uC5D0\uC11C \uD55C \uBE5B\uB098\uB294 \uAD6C\uCCB4\uAC00
-      \uC5B4\uB518\uAC00\uB85C \uB0A0\uC544\uAC04\uB2E4.\r"
+    text: "\uACB0\uAD6D \uACE0\uC591\uC774\uB294 \uC65C \uC0C9\uC744 \uAC00\uC838\uAC14\uB358
+      \uAC78\uAE4C?\r"
+  - name: "\uC5F0\uD638"
+    text: "\uAE00\uC384?\r\n\uADF8\uB0E5 \uC704\uC5D0 \uC788\uB294 \uD654\uBD84\uC744
+      \uACC4\uC18D \uB5A8\uC5B4\uB728\uB9AC\uACE0 \uC2F6\uC5C8\uB358 \uAC70 \uC544\uB2D0\uAE4C?\r"
   - name: "\uB098"
-    text: "\uC7A0\uAE50\uB9CC \uC800\uAC8C \uBB50\uC9C0? \n\uB530\uB77C\uAC00\uBD10\uC57C\uACA0\uB2E4.\r\n"
+    text: "\uADF8\uB7F0 \uAC78\uB85C\uB3C4 \uC0C9\uC744 \uBE7C\uC557\uC744 \uC218
+      \uC788\uB294 \uAC70\uC57C?"
   - name: "\uB098"
-    text: "(\uC8FC\uC704\uB97C \uBCF4\uBA70) \uD5C9\uD5C9... \uC5B4\uB514\uB85C \uAC14\uC9C0?\r"
-  - name: 
-    text: "\uBA40\uB9AC \uBCBD\uD654 \uC55E\uC5D0\uC11C \uC548\uC808\uBD80\uC808\uD558\uBA70
-      \uB0A0\uACE0 \uC788\uB294 \uAD6C\uCCB4\uAC00 \uBCF4\uC778\uB2E4.\r"
+    text: "\uD558\u2026 \uD798\uB4E4\uC5C8\uB2E4\u2026\r"
+  - name: "\uC5F0\uD638"
+    text: "\uC218\uACE0\uD588\uC5B4.\r"
   - name: "\uB098"
-    text: "\uC800\uAE30\uC788\uB2E4! \uADFC\uB370 \uC800 \uBCBD\uD654 \uBB54\uAC00
-      \uC6C0\uC9C1\uC774\uB294 \uAC83 \uAC19\uC740\uB370? \r\n(\uBCBD\uD654\uC5D0
-      \uAC00\uAE4C\uC774 \uAC00\uC11C) \uC790\uC138\uD788 \uBCF4\uB2C8 \uC774 \uBCBD\uD654
-      \uC8FC\uBCC0\uC774\uB791 \uB2E4\uB974\uAC8C \uC0C9\uC774 \uC788\uC796\uC544?
-      \n\uAC8C\uB2E4\uAC00 \uC9C4\uC9DC \uC6C0\uC9C1\uC774\uACE0 \uC788\uACE0\u2026\r"
-  - name: "\uAD6C\uCCB4"
-    text: "\uC800\uAE30...\r"
+    text: "\uBB54\uAC00\u2026 \uC120\uC778\uC7A5\uC744 \uB9CC\uC9C0\uB294\uB370 \uBCBD\uD654\uB77C
+      \uADF8\uB7F0\uC9C0 \uD558\uB098\uB3C4 \uC548 \uC544\uD30C\uC11C \uAE30\uBD84\uC774
+      \uC774\uC0C1\uD588\uC5B4.\r\n\uADFC\uB370, \uC120\uC778\uC7A5\uC740 \uC65C
+      \uC0C9\uC744 \uBE7C\uC557\uC740\uAC70\uC9C0? \r\n\uC6C0\uC9C1\uC774\uC9C0\uB3C4
+      \uC54A\uC558\uC796\uC544.\r"
   - name: "\uB098"
-    text: "\uC5B4\u2026\uC5B4? \r\n(\uB4A4\uB97C \uB3CC\uC544\uBCF4\uBA70) \uC6B0\uC640\uC544\uC545~!
-      \uB0A0\uC544\uB2E4\uB2C8\uB294 \uACF5\uC774 \uB9D0\uD55C\uB2E4!!!\r"
-  - name: "\uAD6C\uCCB4"
-    text: "\uACF5\uC774\uB77C\uB2C8...\r"
-  - name: "\uC5F0\uD638"
-    text: "\uC548\uB155. \uB098\uB294 \uBCBD\uD654\uB9C8\uC744\uC5D0 \uC0B4\uACE0
-      \uC788\uB294 \uC694\uC815\uC73C\uB85C '\uC5F0\uD638'\uB77C\uACE0 \uD574. \r"
-  - name: "\uB098"
-    text: "\uC548\uB155. \n\uADFC\uB370 \uB300\uCCB4 \uC5EC\uAE30\uC11C \uBB34\uC2A8
-      \uC77C\uC774 \uC77C\uC5B4\uB09C\uAC70\uC57C?\r\r"
-  - name: "\uC5F0\uD638"
-    text: "\uADF8\uAC8C... \uD3C9\uC18C\uB791 \uAC19\uC774 \uB9C8\uC744\uC5D0 \uCC3E\uC544\uC624\uB294
-      \uC0AC\uB78C\uB4E4\uC758 \uBBF8\uC18C\uB97C \uBCF4\uBA70 \uC990\uAC70\uC6CC\uD558\uACE0
-      \uC788\uC5C8\uB294\uB370 \uAC11\uC790\uAE30 \uB9C8\uC744\uC758 \uBAA8\uB4E0
-      \uC0C9\uB4E4\uC774 \uBCBD\uD654\uC5D0 \uBE68\uB824 \uB4E4\uC5B4\uAC00\uAE30
-      \uC2DC\uC791\uD588\uACE0, \uB098\uB3C4 \uADF8 \uD3ED\uD48D \uC18D\uC5D0\uC11C
-      \uC815\uC2E0\uC744 \uC783\uC5C8\uC5B4. \r"
-  - name: "\uC5F0\uD638"
-    text: "\uC815\uC2E0\uC744 \uCC28\uB9AC\uACE0 \uBCF4\uB2C8 \uB9C8\uC744\uC5D0\uC11C
-      \uD2B9\uC815 \uBCBD\uD654\uB97C \uC81C\uC678\uD558\uACE0\uB294 \uC0C9\uC744
-      \uB354 \uC774\uC0C1 \uCC3E\uC744 \uC218 \uC5C6\uAC8C \uB418\uC5B4\uC788\uC5C8\uACE0\u2026\n\uB2E4\uD589\uD788
-      \uC0AC\uB78C\uB4E4\uC740 \uB9C8\uC744\uC758 \uBC16\uC5D0\uC11C \uBC1C\uACAC\uB418\uC5C8\uB294\uB370,
-      \uB2E4\uB4E4 \uC774 \uB9C8\uC744\uC5D0 \uC788\uC5C8\uB358 \uC77C\uC5D0 \uB300\uD574
-      \uAE30\uC5B5\uC744 \uBABB\uD558\uB294 \uAC83 \uAC19\uB354\uB77C\uACE0\u2026"
-  - name: "\uC5F0\uD638"
-    text: "\uD2B9\uC815 \uBCBD\uD654\uB4E4\uB9CC\uC774 \uC6C0\uC9C1\uC774\uACE0 \uC0C9\uC774
-      \uC788\uB294 \uAC78\uB85C \uBD10\uC11C\uB294 \uADF8\uB4E4\uC774 \uBCBD\uD654\uB97C
-      \uBCF4\uB7EC\uC624\uB294 \uC0AC\uB78C\uB4E4\uC744 \uBCF4\uACE0 \uC790\uAE30\uB4E4\uB3C4
-      \uBCBD\uD654\uC758 \uBC16\uC73C\uB85C \uB098\uC640 \uC6C0\uC9C1\uC774\uACE0
-      \uC2F6\uC5B4\uC11C \uB9C8\uC744\uC758 \uC0C9\uC744 \uBAA8\uB450 \uAC00\uC838\uAC00
-      \uADF8 \uD798\uC73C\uB85C \uC6C0\uC9C1\uC774\uACE0 \uC788\uB294 \uAC83 \uAC19\uC544.\r"
-  - name: "\uC5F0\uD638"
-    text: "\uC9C0\uAE08\uC740 \uC6B0\uB9AC \uB9C8\uC744\uC758 \uC0C9\uB9CC\uC744
-      \uAC00\uC838\uAC00\uC11C \uBCBD\uD654 \uBC16\uC73C\uB85C \uC644\uC804\uD788
-      \uB098\uC624\uC9C0\uB294 \uBABB\uD558\uACE0 \uC788\uC9C0\uB9CC \uC2DC\uAC04\uC774
-      \uB354 \uD758\uB800\uB2E4\uAC00\uB294 \uB9C8\uC744\uC758 \uBC16\uC758 \uC0C9\uB4E4\uB3C4
-      \uAC00\uC838\uAC00\uC11C \uBCBD\uD654\uC758 \uBC16\uC73C\uB85C \uD280\uC5B4\uB098\uC62C\uC9C0\uB3C4
-      \uBAB0\uB77C. \r"
-  - name: "\uC5F0\uD638"
-    text: "\uADF8\uB807\uAC8C \uB41C\uB2E4\uBA74 \uB354 \uC774\uC0C1 \uC138\uC0C1\uC5D0\uC11C
-      \uC0C9\uC744 \uCC3E\uB294 \uAC83\uC774 \uC5B4\uB824\uC6B8 \uC218 \uC788\uC5B4\u2026\n\uD639\uC2DC
-      \uB098\uB97C \uB3C4\uC640\uC11C \uBCBD\uD654\uB97C \uC548\uC815\uD654 \uC2DC\uCF1C\uC904
-      \uC218 \uC5C6\uC744\uAE4C?\r\n"
-  - name: "\uB098"
-    text: "\uB09C..."
-  - name: "\uC5F0\uD638"
-    text: "(\uC6B8\uBA39\uC774\uBA70) \uB09C \uADF8\uC800 \uC0AC\uB78C\uB4E4\uC758
-      \uBBF8\uC18C\uB97C \uBCF4\uBA70 \uC990\uAC70\uC6CC\uD558\uACE0 \uC2F6\uC744\uBFD0\uC778\uB370
-      \uB354 \uC774\uC0C1 \uADF8\uB7F4 \uC218 \uC5C6\uC744\uC9C0\uB3C4 \uBAB0\uB77C\u2026
-      \n\uC81C\uBC1C \uB098 \uC880 \uB3C4\uC640\uC918\u2026\r"
-  - name: "\uB098"
-    text: "\uC73D\u2026 \uC54C\uC558\uC5B4. \uB3C4\uC640\uC904\uAC8C. \n[\uC800\uB807\uAC8C
-      \uBD80\uD0C1\uD558\uB294 \uB370 \uC5B4\uB5BB\uAC8C \uADF8\uB0E5 \uC9C0\uB098\uCCD0\u2026]\r\n\uB0B4\uAC00
-      \uBB58 \uD558\uBA74 \uB3FC? \r\n"
-  - name: "\uC5F0\uD638"
-    text: "\uBCBD\uD654\uB97C \uC548\uC815\uD654 \uC2DC\uD0AC \uC218 \uC788\uB294
-      \uD798\uC744 \uB108\uC5D0\uAC8C \uC904\uAC8C. \n\uB3C4\uC640\uC918\uC11C \uC815\uB9D0
-      \uACE0\uB9C8\uC6CC!\r"
+    text: "\uACFC\uB3C4\uD55C \uC131\uC7A5 \uC695\uAD6C..?\r"
+  - name: Hint
+    text: "\uAE30\uB9B0 \uBCBD\uD654\uB97C \uCC3E\uC544\uAC00\uC138\uC694."
   nameText: {fileID: 824645872}
   dialogText: {fileID: 678376818}
   nextButton: {fileID: 1060104270}
@@ -1246,7 +1261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 439.61, y: -710.28}
+  m_AnchoredPosition: {x: 412, y: -673}
   m_SizeDelta: {x: 511.3345, y: 511.3357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979576839

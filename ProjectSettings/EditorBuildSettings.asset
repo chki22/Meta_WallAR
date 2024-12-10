@@ -6,6 +6,53 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/InitStory.unity
+    guid: 2027726b76126ed44bbbb369637f5205
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/AfterCatStory.unity
+    guid: cbd71fcc3764fa747865b16564f2582b
+  - enabled: 1
+    path: Assets/Scenes/PreCatStory.unity
+    guid: b451a9ace12e1c3408849c7ba7b8b660
+  - enabled: 1
+    path: Assets/Scenes/BicycleGame.unity
+    guid: 562d5b6a46dd521499120e9caf136245
+  - enabled: 1
+    path: Assets/Scenes/AfterCycleStory.unity
+    guid: 053526d8a1881c74f824615379f88938
+  - enabled: 1
+    path: Assets/Scenes/AfterGiraffeStory.unity
+    guid: fcabf0ac396bf1040a44c0c656ce06fa
+  - enabled: 1
+    path: Assets/Scenes/AfterPlantStory.unity
+    guid: 3ce2d693bc661384d8207655bb215a65
+  - enabled: 1
+    path: Assets/Scenes/FinalStory.unity
+    guid: c3bc77a82fed54b4e93337fd545cc237
+  - enabled: 1
+    path: Assets/Scenes/PreCycleStory.unity
+    guid: 65a546b6e00b0474289d82178e8e1659
+  - enabled: 1
+    path: Assets/Scenes/PreGiraffeStory.unity
+    guid: 3881ca9825ec26e49a168431abd772c8
+  - enabled: 1
+    path: Assets/Scenes/PrePlantStory.unity
+    guid: c6ed0376e00ccbb44aeace2dcce1b180
+  - enabled: 1
+    path: Assets/Scenes/CatDropGame.unity
+    guid: 90ed6eb2b14175640a2a056bb403703b
+  - enabled: 1
+    path: Assets/Scenes/DualImageTracking.unity
+    guid: 6336663036973bd49aea1e741819c359
+  - enabled: 1
+    path: Assets/Scenes/GiraffeGame.unity
+    guid: 528a194ba80d6bc4e8c7bd7d092d54ff
+  - enabled: 1
+    path: Assets/Scenes/HolePlantGame.unity
+    guid: eae3c312a33c30a4783259a66d0c69dd
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 51d935efda7ab7242ab918f8bd003c68, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 74ef3317be125d44088952b9a1e2c146, type: 2}

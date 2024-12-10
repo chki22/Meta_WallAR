@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour
+public class GameManagerPlant : MonoBehaviour
 {
     public List<GameObject> upwardGrowingObjects; // 위로 늘어나는 오브젝트 리스트
     public List<GameObject> downwardGrowingObjects; // 아래로 늘어나는 오브젝트 리스트
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         timerText.rectTransform.anchorMin = new Vector2(0.5f, 1.0f); // 중앙 상단
         timerText.rectTransform.anchorMax = new Vector2(0.5f, 1.0f); // 중앙 상단
         timerText.rectTransform.pivot = new Vector2(0.5f, 1.0f);     // 중심 기준을 상단으로 설정
-        timerText.rectTransform.anchoredPosition = new Vector2(0, -50); // 상단에서 아래로 50px 이동
+        timerText.rectTransform.anchoredPosition = new Vector2(0, -10); // 상단에서 아래로 50px 이동
 
         // Retry Button 초기 설정 (비활성화 및 화면 중앙 배치)
         retryButton.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
             remainingTime -= Time.deltaTime;
             if (remainingTime <= 0)
             {
+                isWin = true;
                 EndGame();
             }
             UpdateUI();
@@ -185,6 +186,7 @@ public class GameManager : MonoBehaviour
 
                 if (destroyCount <= 0)
                 {
+                    isWin = false;
                     EndGame();
                 }
                 yield break;
@@ -210,11 +212,6 @@ public class GameManager : MonoBehaviour
         rectTransform.sizeDelta = new Vector2(282.1547f, 281.5374f);
 
         UpdateUI();
-
-        if (score >= 10)
-        {
-            isWin = true;
-        }
     }
 
     void UpdateUI()
