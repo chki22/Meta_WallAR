@@ -1,47 +1,121 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // TextMeshPro를 사용하는 경우
+using TMPro;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
 {
-    [Header("UI Elements")]
-    [SerializeField] private TextMeshProUGUI dialogText; // 대화를 표시할 텍스트
-    [SerializeField] private Button nextButton;         // Next 버튼
-    [SerializeField] private GameObject dialogPanel;    // 대화 패널 (선택적으로 숨기기/보이기)
+    [System.Serializable]
+    public class Dialog
+    {
+        public string name; // 대화 이름
+        [TextArea]
+        public string text; // 대화 내용
+    }
 
-    [Header("Dialog Settings")]
-    [SerializeField] private string[] dialogLines;      // Inspector에서 설정할 대화 리스트
+    public List<Dialog> dialogList; // 대화 리스트
+    public TextMeshProUGUI nameText; // 이름 텍스트를 표시할 Text
+    public TextMeshProUGUI dialogText; // 대화 내용을 표시할 Text
+    public Button nextButton; // 다음 대화 버튼
 
-    private int currentLineIndex = 0; // 현재 대화 인덱스
+    public Image yeonhoImage; // 특정 dialogIndex에서 활성화할 Image
+
+    private int currentDialogIndex = 0;
+    private Coroutine typingCoroutine;
+    private bool isTyping = false;
+
+    public float typingSpeed = 0.05f; // 텍스트 출력 속도
 
     void Start()
     {
-        // 초기화
-        if (dialogLines == null || dialogLines.Length == 0)
+        // 버튼 클릭 이벤트 추가
+        nextButton.onClick.AddListener(DisplayNextDialog);
+
+        // 첫 번째 대화 표시
+        if (dialogList.Count > 0)
         {
-            Debug.LogError("DialogManager: 대화 내용이 설정되지 않았습니다.");
+            DisplayDialog();
+        }
+
+        // 특정 이미지 초기 상태를 비활성화
+        if (yeonhoImage != null)
+        {
+            yeonhoImage.gameObject.SetActive(false);
+        }
+    }
+
+    void DisplayNextDialog()
+    {
+        if (isTyping)
+        {
+            // 현재 애니메이션 중이라면 즉시 전체 텍스트 표시
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+            }
+            dialogText.text = dialogList[currentDialogIndex].text;
+            isTyping = false;
             return;
         }
 
-        // 대화 패널 및 버튼 설정
-        dialogPanel.SetActive(true); // 대화 패널 보이기
-        dialogText.text = dialogLines[currentLineIndex]; // 첫 번째 대화 표시
-    }
-
-    public void DisplayNextDialog()
-    {
-        currentLineIndex++;
-
-        // 대화가 끝났을 경우 처리
-        if (currentLineIndex >= dialogLines.Length)
+        // 다음 대화로 이동
+        currentDialogIndex++;
+        if (currentDialogIndex < dialogList.Count)
         {
-            Debug.Log("대화가 끝났습니다.");
-            dialogPanel.SetActive(false); // 대화 패널 숨기기
+            DisplayDialog();
         }
         else
         {
-            // 다음 대화 표시
-            dialogText.text = dialogLines[currentLineIndex];
+            EndDialog();
+        }
+    }
+
+    void DisplayDialog()
+    {
+        Dialog currentDialog = dialogList[currentDialogIndex];
+
+        // 이름 및 대화 내용 설정
+        nameText.text = currentDialog.name;
+
+        // 텍스트 출력 애니메이션 시작
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+        typingCoroutine = StartCoroutine(TypeText(currentDialog.text));
+
+        // 특정 dialogIndex에서 이미지 활성화
+        if (SceneManager.GetActiveScene().name == "Story1" && currentDialogIndex >= 6 && yeonhoImage != null)
+        {
+            yeonhoImage.gameObject.SetActive(true);
+            Debug.Log("이미지가 활성화되었습니다.");
+        }
+    }
+
+    IEnumerator TypeText(string text)
+    {
+        isTyping = true;
+        dialogText.text = "";
+
+        foreach (char letter in text.ToCharArray())
+        {
+            dialogText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        isTyping = false;
+    }
+
+    void EndDialog()
+    {
+        // 대화 종료 처리
+        Debug.Log("대화 종료");
+        nextButton.gameObject.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "Story1")
+        {
+            SceneManager.LoadScene("DualImageTracking");
         }
     }
 }
