@@ -58,7 +58,6 @@ public class DualImageTrackingRevise : MonoBehaviour {
                     // If the collided object is a created prefab, the object is processed.
                     GameObject touchedObject = hit.collider.gameObject;
 
-                    // When you touch the Chito prefabricated structure, a sound is output and then switches to "stage2".
                     if (touchedObject.CompareTag("Cat"))
                     {
                         if (clickSound != null)
@@ -68,7 +67,7 @@ public class DualImageTrackingRevise : MonoBehaviour {
                         }
 
                     }
-                    // When you touch the Flame prefabricated structure, a sound is output and then switches to "stage1".
+
                     if (touchedObject.CompareTag("Plant"))
                     {
                         if (clickSound != null)
@@ -78,8 +77,18 @@ public class DualImageTrackingRevise : MonoBehaviour {
                         }
 
                     }
-                    // When you touch the Final prefabricated structure, a sound is output and then switches to "stage3".
-                    if (touchedObject.CompareTag("Final"))
+
+                    if (touchedObject.CompareTag("Cycle"))
+                    {
+                        if (clickSound != null)
+                        {
+                            audioSource.PlayOneShot(clickSound);
+                            SceneManager.LoadScene("stage3");
+                        }
+
+                    }
+
+                    if (touchedObject.CompareTag("Light"))
                     {
                         if (clickSound != null)
                         {

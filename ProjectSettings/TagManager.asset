@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Plant
   - Cat
+  - Cycle
+  - Light
   layers:
   - Default
   - TransparentFX
