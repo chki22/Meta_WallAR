@@ -228,7 +228,7 @@ public class GameManagerPlant : MonoBehaviour
         if (isWin)
         {
             Debug.Log("You Win!");
-            SceneManager.LoadScene("DualImageTracking");
+            SceneManager.LoadScene("AfterPlantStory");
         }
         else
         {

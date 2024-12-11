@@ -113,7 +113,7 @@ public class GameManagerCat : MonoBehaviour
     private void Clear()
     {
         Debug.Log("Clear!");
-        SceneManager.LoadScene("DualImageTracking");
+        SceneManager.LoadScene("AfterCatStory");
         Time.timeScale = 0f;
     }
 
