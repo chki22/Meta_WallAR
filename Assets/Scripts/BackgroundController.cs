@@ -5,7 +5,13 @@ using UnityEngine;
 public class BackgroundController : MonoBehaviour
 {
     public float speed = 3.0f; // 이동 속도
-    private float repositionThreshold = 1060f; // 위치 변경 기준 값
+    private float repositionThreshold;
+
+    void Start()
+    {
+        // 화면의 오른쪽 끝을 기준으로 repositionThreshold 계산
+        repositionThreshold = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x + GetComponent<SpriteRenderer>().bounds.size.x / 2;
+    }
 
     void Update()
     {
@@ -26,8 +32,10 @@ public class BackgroundController : MonoBehaviour
 
     void Reposition()
     {
-        // 초과된 값을 계산하여 정확히 -1060으로 이동
+        // 초과된 값을 계산하여 정확히 왼쪽 끝으로 이동
         float excess = transform.position.x - repositionThreshold;
-        transform.position = new Vector3(-repositionThreshold + excess, transform.position.y, transform.position.z);
+
+        float leftLimit = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x - GetComponent<SpriteRenderer>().bounds.size.x / 2;
+        transform.position = new Vector3(leftLimit + excess, transform.position.y, transform.position.z);
     }
 }
