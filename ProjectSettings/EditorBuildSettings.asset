@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/CatDropGame.unity
+    guid: 90ed6eb2b14175640a2a056bb403703b
+  - enabled: 1
     path: Assets/Scenes/TitleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -47,9 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PrePlantStory.unity
     guid: c6ed0376e00ccbb44aeace2dcce1b180
-  - enabled: 1
-    path: Assets/Scenes/CatDropGame.unity
-    guid: 90ed6eb2b14175640a2a056bb403703b
   - enabled: 1
     path: Assets/Scenes/GiraffeGame.unity
     guid: 528a194ba80d6bc4e8c7bd7d092d54ff
