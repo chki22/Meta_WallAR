@@ -118,6 +118,26 @@ public class DialogManager : MonoBehaviour
             yeonhoImage.gameObject.SetActive(true);
             Debug.Log("이미지가 활성화되었습니다.");
         }
+        else if (SceneManager.GetActiveScene().name == "AfterGiraffeStory1" && currentDialogIndex >= 7 && yeonhoImage != null)
+        {
+            yeonhoImage.gameObject.SetActive(false);
+            Debug.Log("이미지가 비활성화되었습니다.");
+        }
+        else if (SceneManager.GetActiveScene().name == "AfterGiraffeStory2" && currentDialogIndex >= 0 && yeonhoImage != null)
+        {
+            yeonhoImage.gameObject.SetActive(false);
+            Debug.Log("이미지가 비활성화되었습니다.");
+        }
+        else if (SceneManager.GetActiveScene().name == "FinalStory" && currentDialogIndex >= 1 && currentDialogIndex <= 20  && yeonhoImage != null)
+        {
+            yeonhoImage.gameObject.SetActive(true);
+            Debug.Log("이미지가 활성화되었습니다.");
+        }
+        else if (SceneManager.GetActiveScene().name == "FinalStory" && currentDialogIndex >= 21 && yeonhoImage != null)
+        {
+            yeonhoImage.gameObject.SetActive(false);
+            Debug.Log("이미지가 비활성화되었습니다.");
+        }
         else if (yeonhoImage != null)
         {
             yeonhoImage.gameObject.SetActive(false);
@@ -175,11 +195,14 @@ public class DialogManager : MonoBehaviour
             case "PreGiraffeStory":
                 SceneManager.LoadScene("GiraffeGame");
                 break;
-            case "AfterGiraffeStory":
+            case "AfterGiraffeStory1":
+                SceneManager.LoadScene("AfterGiraffeStory2");
+                break;
+            case "AfterGiraffeStory2":
                 SceneManager.LoadScene("FinalStory");
                 break;
             case "FinalStory":
-                SceneManager.LoadScene("DualImageTracking");
+                SceneManager.LoadScene("TitleScene");
                 break;
             default:
                 Debug.LogWarning("Unknown scene name");
