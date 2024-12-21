@@ -142,3 +142,5 @@ public class GameManagerCat : MonoBehaviour
         XRGeneralSettings.Instance.Manager.StartSubsystems();
     }
 }
+
+

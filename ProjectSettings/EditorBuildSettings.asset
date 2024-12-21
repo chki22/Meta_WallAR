@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/CatDropGame.unity
     guid: 90ed6eb2b14175640a2a056bb403703b
+  - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/InitStory.unity
     guid: 2027726b76126ed44bbbb369637f5205
