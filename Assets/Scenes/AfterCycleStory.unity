@@ -1498,7 +1498,7 @@ MonoBehaviour:
       \uBCFC \uC218 \uC788\uC744\uAC70\uC57C.\r"
   - name: "\uC5F0\uD638"
     text: "\uACE0\uB9C8\uC6CC\u2026\r"
-  - name: 
+  - name: Hint
     text: "<\uACE0\uC591\uC774 \uBCBD\uD654\uB97C \uCC3E\uC544\uAC00\uC138\uC694>\r"
   nameText: {fileID: 888656459}
   dialogText: {fileID: 957769951}
