@@ -643,7 +643,7 @@ MonoBehaviour:
   - name: "\uB098"
     text: "\uBB50\u2026 \uADF8\uAC74 \uADF8\uB807\uC9C0.\r"
   - name: Hint
-    text: "<\uC120\uC778\uC7A5 \uBCBD\uD654\uB97C \uCC3E\uC544\uAC00\uC138\uC694>\r"
+    text: "\uC120\uC778\uC7A5 \uBCBD\uD654\uB97C \uCC3E\uC544\uAC00\uC138\uC694."
   nameText: {fileID: 1664776903}
   dialogText: {fileID: 1185644975}
   nextButton: {fileID: 1355053562}
@@ -1304,7 +1304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.60784316}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

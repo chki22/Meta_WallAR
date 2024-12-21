@@ -113,29 +113,14 @@ public class DialogManager : MonoBehaviour
         typingCoroutine = StartCoroutine(TypeText(currentDialog.text));
 
         // 특정 dialogIndex에서 이미지 활성화
-        if (SceneManager.GetActiveScene().name == "InitStory" && currentDialogIndex < 5 && yeonhoImage != null)
+        if (SceneManager.GetActiveScene().name == "InitStory" && currentDialogIndex >= 6 && yeonhoImage != null)
         {
-            yeonhoImage.gameObject.SetActive(false);
-        }
-        else if (SceneManager.GetActiveScene().name == "AfterGiraffeStory1" && currentDialogIndex >= 7 && yeonhoImage != null)
-        {
-            yeonhoImage.gameObject.SetActive(false);
-        }
-        else if (SceneManager.GetActiveScene().name == "AfterGiraffeStory2" && yeonhoImage != null)
-        {
-            yeonhoImage.gameObject.SetActive(false);
-        }
-        else if (SceneManager.GetActiveScene().name == "FinalStory" && currentDialogIndex < 1  && yeonhoImage != null)
-        {
-            yeonhoImage.gameObject.SetActive(false);
-        }
-        else if (SceneManager.GetActiveScene().name == "FinalStory" && currentDialogIndex >= 22 && yeonhoImage != null)
-        {
-            yeonhoImage.gameObject.SetActive(false);
+            yeonhoImage.gameObject.SetActive(true);
+            Debug.Log("이미지가 활성화되었습니다.");
         }
         else if (yeonhoImage != null)
         {
-            yeonhoImage.gameObject.SetActive(true);
+            yeonhoImage.gameObject.SetActive(false);
         }
     }
 
@@ -190,14 +175,11 @@ public class DialogManager : MonoBehaviour
             case "PreGiraffeStory":
                 SceneManager.LoadScene("GiraffeGame");
                 break;
-            case "AfterGiraffeStory1":
-                SceneManager.LoadScene("AfterGiraffeStory2");
-                break;
-            case "AfterGiraffeStory2":
+            case "AfterGiraffeStory":
                 SceneManager.LoadScene("FinalStory");
                 break;
             case "FinalStory":
-                SceneManager.LoadScene("TitleScene");
+                SceneManager.LoadScene("DualImageTracking");
                 break;
             default:
                 Debug.LogWarning("Unknown scene name");
