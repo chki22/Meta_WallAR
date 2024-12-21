@@ -604,11 +604,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabMap:
+  - {fileID: 3462696933848472087, guid: d03768cd174591e478be6b565c912f59, type: 3}
   - {fileID: 6531317122157820136, guid: 701c43c4dd7536745b6d1c56fa4ba906, type: 3}
   - {fileID: 3462696933848472087, guid: f54acadbf2871f144b786d4159e7e2c6, type: 3}
+  - {fileID: 3462696933848472087, guid: 3265c0cc4c7a47a4b8431709a2ff2621, type: 3}
   targetImageNames:
+  - cycle
   - cat
   - plant
+  - light
   clickSound: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
 --- !u!114 &1268500737
 MonoBehaviour:
