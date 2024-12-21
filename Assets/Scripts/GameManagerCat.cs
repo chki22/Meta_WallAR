@@ -33,13 +33,13 @@ public class GameManagerCat : MonoBehaviour
         scoreText.rectTransform.anchorMin = new Vector2(0, 0); // 왼쪽 아래
         scoreText.rectTransform.anchorMax = new Vector2(0, 0); // 왼쪽 아래
         scoreText.rectTransform.pivot = new Vector2(0, 0);     // 왼쪽 아래 기준
-        scoreText.rectTransform.anchoredPosition = new Vector2(20, 30); // 화면 경계에서 10px 떨어짐
+        scoreText.rectTransform.anchoredPosition = new Vector2(20, 50); // 화면 경계에서 10px 떨어짐
 
         // Lives Text: 오른쪽 아래 배치
         livesText.rectTransform.anchorMin = new Vector2(1, 0); // 오른쪽 아래
         livesText.rectTransform.anchorMax = new Vector2(1, 0); // 오른쪽 아래
         livesText.rectTransform.pivot = new Vector2(1, 0);     // 오른쪽 아래 기준
-        livesText.rectTransform.anchoredPosition = new Vector2(-20, 30); // 화면 경계에서 10px 떨어짐
+        livesText.rectTransform.anchoredPosition = new Vector2(-20, 50); // 화면 경계에서 10px 떨어짐
 
         // Timer Text: 화면 중앙 배치
         timerText.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
@@ -142,5 +142,3 @@ public class GameManagerCat : MonoBehaviour
         XRGeneralSettings.Instance.Manager.StartSubsystems();
     }
 }
-
-
