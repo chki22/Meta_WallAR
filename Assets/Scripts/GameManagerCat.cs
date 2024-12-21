@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.XR.Management;
 
 public class GameManagerCat : MonoBehaviour
 {
@@ -31,13 +33,13 @@ public class GameManagerCat : MonoBehaviour
         scoreText.rectTransform.anchorMin = new Vector2(0, 0); // 왼쪽 아래
         scoreText.rectTransform.anchorMax = new Vector2(0, 0); // 왼쪽 아래
         scoreText.rectTransform.pivot = new Vector2(0, 0);     // 왼쪽 아래 기준
-        scoreText.rectTransform.anchoredPosition = new Vector2(10, 10); // 화면 경계에서 10px 떨어짐
+        scoreText.rectTransform.anchoredPosition = new Vector2(20, 30); // 화면 경계에서 10px 떨어짐
 
         // Lives Text: 오른쪽 아래 배치
         livesText.rectTransform.anchorMin = new Vector2(1, 0); // 오른쪽 아래
         livesText.rectTransform.anchorMax = new Vector2(1, 0); // 오른쪽 아래
         livesText.rectTransform.pivot = new Vector2(1, 0);     // 오른쪽 아래 기준
-        livesText.rectTransform.anchoredPosition = new Vector2(-10, 10); // 화면 경계에서 10px 떨어짐
+        livesText.rectTransform.anchoredPosition = new Vector2(-20, 30); // 화면 경계에서 10px 떨어짐
 
         // Timer Text: 화면 중앙 배치
         timerText.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
@@ -113,7 +115,7 @@ public class GameManagerCat : MonoBehaviour
     private void Clear()
     {
         Debug.Log("Clear!");
-        SceneManager.LoadScene("AfterCatStory");
+        StartCoroutine(LoadSceneAsync("AfterCatStory"));
         Time.timeScale = 0f;
     }
 
@@ -124,6 +126,19 @@ public class GameManagerCat : MonoBehaviour
 
     private void RestartGame()
     {
-        SceneManager.LoadScene("CatDropGame");
+        StartCoroutine(LoadSceneAsync("CatDropGame"));
+    }
+
+    IEnumerator LoadSceneAsync(string sceneName)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        // 씬 로드 후 XR 시스템 초기화
+        XRGeneralSettings.Instance.Manager.InitializeLoaderSync();
+        XRGeneralSettings.Instance.Manager.StartSubsystems();
     }
 }
