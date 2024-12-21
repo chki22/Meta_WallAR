@@ -63,7 +63,7 @@ public class DualImageTrackingRevise : MonoBehaviour {
                         if (clickSound != null)
                         {
                             audioSource.PlayOneShot(clickSound);
-                            SceneManager.LoadScene("CatDropGame");
+                            SceneManager.LoadScene("PreCatStory");
                         }
 
                     }
@@ -73,7 +73,7 @@ public class DualImageTrackingRevise : MonoBehaviour {
                         if (clickSound != null)
                         {
                             audioSource.PlayOneShot(clickSound);
-                            SceneManager.LoadScene("HolePlantGame");
+                            SceneManager.LoadScene("PrePlantStory");
                         }
 
                     }
@@ -83,7 +83,7 @@ public class DualImageTrackingRevise : MonoBehaviour {
                         if (clickSound != null)
                         {
                             audioSource.PlayOneShot(clickSound);
-                            SceneManager.LoadScene("stage3");
+                            SceneManager.LoadScene("PreCycleStory");
                         }
 
                     }
@@ -93,7 +93,7 @@ public class DualImageTrackingRevise : MonoBehaviour {
                         if (clickSound != null)
                         {
                             audioSource.PlayOneShot(clickSound);
-                            SceneManager.LoadScene("stage3");
+                            SceneManager.LoadScene("PreGiraffeStory");
                         }
 
                     }

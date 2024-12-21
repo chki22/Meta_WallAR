@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DualImageTracking.unity
-    guid: 6336663036973bd49aea1e741819c359
+    path: Assets/Scenes/TitleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/InitStory.unity
     guid: 2027726b76126ed44bbbb369637f5205
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/DualImageTracking.unity
+    guid: 6336663036973bd49aea1e741819c359
+  - enabled: 1
+    path: Assets/Scenes/InfoScene.unity
+    guid: d6601e3080129d746b31ee464cd1147c
   - enabled: 1
     path: Assets/Scenes/AfterCatStory.unity
     guid: f99aab801f2323e4cbabdb2cd6c1836f
